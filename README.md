@@ -1,2 +1,2 @@
-# NSBM_StudyCircle
+# StudyCircle
 test
