@@ -1,3 +1,4 @@
-function openNotes() {
-    window.location.href = "notes.html";
+function showMenu() {
+    var menu = document.getElementById("menu");
+    menu.classList.toggle("show");
 }

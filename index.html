@@ -1,26 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>NSBM StudyCircle</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyCircle</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <nav>
-        <h2>StudyCircle</h2>
+    <header>
+        <div class="container nav">
+            <a href="index.html" class="logo"><span class="logo-box">S</span> Study<span class="green">Circle</span></a>
+            <button class="menu-btn" onclick="showMenu()" aria-label="Toggle menu">☰</button>
+            <div class="menu" id="menu">
+                <a href="index.html" class="active">Home</a>
+                <a href="notes.html">Notes</a>
+                <a href="questions.html">Q&amp;A</a>
+                <a href="groups.html">Study Groups</a>
+                <a href="login.html">Log in</a>
+                <a href="register.html" class="btn">Get Started →</a>
+            </div>
+        </div>
+    </header>
 
-        <a href="index.html">Home</a>
-        <a href="notes.html">Notes</a>
-        <a href="questions.html">Questions</a>
-        <a href="groups.html">Groups</a>
-        <a href="login.html">Login</a>
-    </nav>
+    <section class="home">
+        <div class="container home-row">
+            <div class="home-text">
+                <p class="small-title">✦ YOUR CAMPUS LEARNING COMMUNITY</p>
+                <h1>Better learning<br>starts <span class="green">together.</span></h1>
+                <p class="description">Your space to share lecture notes, ask questions, and connect with fellow students. Make every study session count.</p>
+                <div class="buttons">
+                    <a href="register.html" class="btn">Join StudyCircle →</a>
+                    <a href="notes.html" class="btn-light">Explore Notes</a>
+                </div>
+                <p class="note">✦ Share knowledge &nbsp; ✦ Find your people &nbsp; ✦ Grow together</p>
+            </div>
 
-    <div class="home">
-        <h1>Welcome to StudyCircle</h1>
-        <p>Share notes, ask questions and study together.</p>
-        <button onclick="openNotes()">Explore Notes</button>
-    </div>
+            <div class="study-box">
+                <div class="study-head">📗 My Study Space <span>•••</span></div>
+                <h2>Ready to learn? 👋</h2>
+                <p>Choose what you want to do today.</p>
+                <a href="notes.html" class="study-link">📚 Lecture Notes <span>→</span></a>
+                <a href="questions.html" class="study-link">💬 Ask a Question <span>→</span></a>
+                <a href="groups.html" class="study-link">👥 Study Groups <span>→</span></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features container">
+        <div class="heading">
+            <p class="small-title">WHAT YOU CAN DO</p>
+            <h2>Everything you need to <span class="green">study smarter.</span></h2>
+            <p>Simple tools to make university life a little easier.</p>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="icon-box">📚</div>
+                <h3>Share Study Notes</h3>
+                <p>Upload your notes and explore helpful materials shared by students.</p>
+                <a href="notes.html">Explore notes →</a>
+            </div>
+            <div class="card">
+                <div class="icon-box orange">💭</div>
+                <h3>Questions &amp; Answers</h3>
+                <p>Ask questions, share answers, and solve problems together.</p>
+                <a href="questions.html">Join discussions →</a>
+            </div>
+            <div class="card">
+                <div class="icon-box purple">👥</div>
+                <h3>Study Groups</h3>
+                <p>Find study partners and plan sessions for your next big exam.</p>
+                <a href="groups.html">Find a group →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="join">
+            <div>
+                <p>LET'S GET STARTED</p>
+                <h2>Your next great idea starts here.</h2>
+                <p>Join your campus community and make learning a team effort.</p>
+            </div>
+            <a href="register.html" class="btn-white">Create an account →</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-row">
+            <p><b>StudyCircle</b> · Learn. Share. Grow.</p>
+            <p>Made for the NSBM student community</p>
+        </div>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>
