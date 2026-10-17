@@ -1,45 +1,381 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0fdf4;
+    color: #19352b;
 }
 
-nav {
-    background-color: #166534;
-    padding: 20px;
-}
-
-nav h2 {
-    display: inline;
-    color: white;
-    margin-right: 40px;
-}
-
-nav a {
-    color: white;
+a {
     text-decoration: none;
-    margin-right: 20px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.green {
+    color: #219b5d;
+}
+
+header {
+    background-color: white;
+    border-bottom: 1px solid #e5eee8;
+}
+
+.nav {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #173c2c;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo-box {
+    background-color: #17844d;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.menu a {
+    color: #43594d;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #16864d;
+}
+
+.menu .active {
+    color: #16864d;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #18894e;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 9px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background-color: #106a3b;
+    color: white;
+}
+
+.menu .btn {
+    color: white;
+}
+
+.menu-btn {
+    display: none;
+    background-color: #e9f7ef;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 22px;
+    cursor: pointer;
 }
 
 .home {
-    text-align: center;
-    padding: 100px 20px;
+    background-color: #f1fbf4;
+    padding: 75px 0;
+}
+
+.home-row {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.home-text {
+    flex: 1;
+}
+
+.small-title {
+    color: #168b50;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .home h1 {
-    color: #166534;
-    font-size: 40px;
+    font-size: 52px;
+    line-height: 1.2;
+    margin: 20px 0;
 }
 
-.home p {
-    color: #555;
+.description {
+    color: #65796e;
+    line-height: 1.8;
 }
 
-button {
-    background-color: #16a34a;
+.buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.btn-light {
+    display: inline-block;
+    background-color: white;
+    color: #23603f;
+    padding: 14px 20px;
+    border: 1px solid #d4e8dc;
+    border-radius: 9px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.btn-light:hover {
+    background-color: #e2f7e9;
+}
+
+.note {
+    color: #829489;
+    font-size: 12px;
+    margin-top: 25px;
+}
+
+.study-box {
+    flex: 1;
+    background-color: white;
+    padding: 32px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px #dce9e0;
+}
+
+.study-head {
+    background-color: #166534;
     color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 6px;
-    cursor: pointer;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.study-box h2 {
+    font-size: 30px;
+    margin: 30px 0 10px;
+}
+
+.study-box p {
+    color: #64776b;
+}
+
+.study-link {
+    display: flex;
+    justify-content: space-between;
+    background-color: #effbf3;
+    color: #166534;
+    font-weight: bold;
+    padding: 20px;
+    margin-top: 14px;
+    border-radius: 12px;
+    transition: 0.2s;
+}
+
+.study-link:hover {
+    background-color: #d8f5e2;
+    transform: translateY(-3px);
+}
+
+.features {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.heading h2 {
+    font-size: 34px;
+}
+
+.heading p {
+    color: #819086;
+}
+
+.heading .small-title {
+    color: #168b50;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    flex: 1;
+    padding: 28px;
+    border: 1px solid #e7eee9;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px #e8eee9;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px #d3e1d7;
+}
+
+.icon-box {
+    display: inline-block;
+    background-color: #e2f7e9;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 26px;
+}
+
+.orange {
+    background-color: #fff2de;
+}
+
+.purple {
+    background-color: #eee8ff;
+}
+
+.card p {
+    color: #7a8b80;
+    line-height: 1.7;
+}
+
+.card a {
+    color: #16864d;
+    font-weight: bold;
+}
+
+.join {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #157944;
+    color: white;
+    border-radius: 18px;
+    padding: 40px;
+    margin-bottom: 65px;
+}
+
+.join p {
+    color: #d4ecdc;
+}
+
+.btn-white {
+    display: inline-block;
+    background-color: white;
+    color: #166f40;
+    padding: 14px 20px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.btn-white:hover {
+    background-color: #e2f7e9;
+}
+
+footer {
+    border-top: 1px solid #e8eee9;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+    color: #7a8d80;
+    font-size: 13px;
+}
+
+.footer-row b {
+    color: #17884d;
+}
+
+@media (max-width: 850px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background-color: white;
+        flex-direction: column;
+        box-shadow: 0 8px 20px #dddddd;
+        z-index: 10;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .home-row {
+        flex-direction: column;
+    }
+
+    .home-text {
+        width: 100%;
+    }
+
+    .study-box {
+        width: 100%;
+    }
+
+    .home h1 {
+        font-size: 38px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .join {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-row {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .home {
+        padding: 45px 0;
+    }
+
+    .study-box {
+        padding: 20px;
+    }
+
+    .home h1 {
+        font-size: 34px;
+    }
 }
