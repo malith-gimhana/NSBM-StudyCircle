@@ -35,17 +35,12 @@ header {
 }
 
 .logo {
-    color: #173c2c;
     font-size: 23px;
     font-weight: bold;
+    color: #187a46;
+    text-decoration: none;
 }
 
-.logo-box {
-    background-color: #17844d;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 10px;
-}
 
 .menu {
     display: flex;
