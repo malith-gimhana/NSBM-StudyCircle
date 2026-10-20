@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes - StudyCircle</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="page-width top-row">
+            <a href="index.html" class="brand">📚 StudyCircle</a>
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="notes.html">Notes</a>
+                <a href="upload.html">Upload</a>
+                <a href="index.html">Home</a>
+            </nav>
+        </div>
+    </header>
+    <main class="page-width">
+        <section class="welcome">
+            <h1>Lecture Notes 📖</h1>
+            <p>Search notes shared by students.</p>
+        </section>
+        <div class="search-area">
+            <input type="text" id="searchNotes" onkeyup="searchNotes()" placeholder="Search notes">
+            <button class="green-btn" onclick="searchNotes()">Search</button>
+        </div>
+        <section class="card-row" id="notesList">
+            <div class="info-card note-card">
+                <h2>Web and Mobile Development</h2>
+                <p>Module Code: SE102.3 </p>
+                <p>26.1 - IFSLS Intake - Year 1 Semester 2</p>
+                <span class="small-label">PDF • Sample note</span>
+            </div>
+            <div class="info-card note-card">
+                <h2>Algorithms and Data Structures</h2>
+                <p>Module Code: CS106.3</p>
+                <p>26.1 - IFSLS Intake - Year 1 Semester 2</p>
+                <span class="small-label">PDF • Sample note</span>
+            </div>
+            <div class="info-card note-card">
+                <h2>Object Oriented Programming with Java</h2>
+                <p>Module Code: SE101.3 </p>
+                <p>26.1 - IFSLS Intake - Year 1 Semester 2</p>
+                <span class="small-label">PDF • Sample note</span>
+            </div>
+            <div class="info-card note-card">
+                <h2>IT Solutions Architecture</h2>
+                <p>Module Code: CS104.3 </p>
+                <p>26.1 - IFSLS Intake - Year 1 Semester 2</p>
+                <span class="small-label">PDF • Sample note</span>
+            </div>
+            <div class="info-card note-card">
+                <h2>Fundamentals of Data Communication and Security</h2>
+                <p>Module Code: CN101.3 </p>
+                <p>26.1 - IFSLS Intake - Year 1 Semester 2</p>
+                <span class="small-label">PDF • Sample note</span>
+            </div>
+            
+
+        </section>
+        <p id="noResults" class="message" hidden>No notes found.</p>
+    </main>
+    <footer class="page-width">StudyCircle • Student Learning Community</footer>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
