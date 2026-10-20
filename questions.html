@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions - StudyCircle</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/questions.css">
+</head>
+<body>
+    <header class="question-header">
+        <div class="question-container question-nav">
+            <a href="index.html" class="question-logo">📚 StudyCircle</a>
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="notes.html">Notes</a>
+                <a href="questions.html">Questions</a>
+                <a href="index.html">Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="question-container">
+        <section class="question-intro">
+            <h1>Questions & Answers 💬</h1>
+            <p>Ask questions and help other students learn.</p>
+        </section>
+
+        <section class="question-form-box">
+            <h2>Ask a Question</h2>
+            <form onsubmit="return addQuestion()">
+                <label for="questionTitle">Question Title</label>
+                <input type="text" id="questionTitle" placeholder="Enter your question" required>
+
+                <label for="questionSubject">Subject</label>
+                <select id="questionSubject" required>
+                    <option value="" hidden>Choose a subject</option>
+                    <option>Web and Mobile Development</option>
+                    <option>Algorithms and Data Structures</option>
+                    <option>Object Oriented Programming with Java</option>
+                    <option>IT Solutions Architecture</option>
+                    <option>Fundamentals of Data Communication and Security</option>
+                    <option>Other</option>
+                </select>
+
+                <label for="questionDetails">Details</label>
+                <textarea id="questionDetails" rows="4" placeholder="Explain your question" required></textarea>
+
+                <button type="submit" class="question-btn">Post Question</button>
+                <p id="questionMessage" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="question-list-section">
+            <h2>Recent Questions</h2>
+            <div id="questionList">
+                <div class="question-card">
+                    <span class="question-subject">Web and Mobile Development</span>
+                    <h3>What is the difference between HTML and CSS?</h3>
+                    <p>Can someone explain with a simple example?</p>
+                    <div class="answer-area">
+                        <h4>Answers</h4>
+                        <div class="answer-list">
+                            <p>HTML creates the structure. CSS is used to style the page.</p>
+                        </div>
+                        <input type="text" placeholder="Write an answer" class="answer-input">
+                        <button type="button" class="answer-btn" onclick="addAnswer(this)">Reply</button>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <span class="question-subject">Object Oriented Programming with Java</span>
+                    <h3>Which component of the Java Development Kit is solely responsible for executing the compiled Java bytecode?</h3>
+                    <div class="answer-area">
+                        <h4>Answers</h4>
+                        <div class="answer-list"></div>
+                        <input type="text" placeholder="Write an answer" class="answer-input">
+                        <button type="button" class="answer-btn" onclick="addAnswer(this)">Reply</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="question-footer">StudyCircle • Student Learning Community</footer>
+    <script src="js/questions.js"></script>
+</body>
+</html>
