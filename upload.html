@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Notes - StudyCircle</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="page-width top-row">
+            <a href="index.html" class="brand">📚 StudyCircle</a>
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="notes.html">Notes</a>
+                <a href="upload.html">Upload</a>
+                <a href="index.html">Home</a>
+            </nav>
+        </div>
+    </header>
+    <main class="page-width">
+        <section class="welcome">
+            <h1>Upload Your Notes ⬆️</h1>
+            <p>Help your friends by sharing useful study materials.</p>
+        </section>
+
+        <section class="form-box">
+            <form id="uploadForm" onsubmit="return uploadCheck()">
+                <label for="noteTitle">Note Title</label>
+                <input type="text" id="noteTitle" placeholder="Enter note title" required>
+                <label for="subject">Subject</label>
+                <select id="subject" required>
+                    <option value="" hidden>Choose a subject</option>
+                    <option>Web and Mobile Development</option>
+                    <option>Algorithms and Data Structures</option>
+                    <option>Object Oriented Programming with Java</option>
+                    <option>IT Solutions Architecture</option>
+                    <option>Fundamentals of Data Communication and Security</option>
+                    <option>Other</option>
+                </select>
+                <label for="description">Description</label>
+                <textarea id="description" rows="4" placeholder="Short description" required></textarea>
+                <label for="noteFile">Select PDF file</label>
+                <input type="file" id="noteFile" accept=".pdf,application/pdf" required>
+                <button type="submit" class="green-btn">Upload Note</button>
+            </form>
+            <p id="uploadMessage" class="message" aria-live="polite"></p>
+        </section>
+    </main>
+    <footer class="page-width">StudyCircle • Student Learning Community</footer>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
