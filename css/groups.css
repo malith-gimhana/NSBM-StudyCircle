@@ -1,0 +1,153 @@
+/* Member 5 - Study Groups and Sessions */
+body {
+    background-color: #f3faf5;
+    font-family: Arial, sans-serif;
+    color: #19352b;
+}
+
+.page-width {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.topbar {
+    background-color: white;
+    border-bottom: 1px solid #e0e9e2;
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.brand {
+    color: #167c45;
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.top-row nav a {
+    color: #244d35;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.top-row nav a:hover {
+    color: #15934e;
+}
+
+.welcome {
+    margin-top: 55px;
+    margin-bottom: 30px;
+}
+
+.welcome h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    color: #6b8072;
+}
+
+.form-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #e0e9e2;
+    margin-bottom: 45px;
+}
+
+.form-box h2 {
+    margin-top: 0;
+}
+
+.form-box label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d4dfd7;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.green-btn {
+    background-color: #17844d;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 18px;
+}
+
+.green-btn:hover {
+    background-color: #106a3b;
+}
+
+.list-section {
+    margin-bottom: 60px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.group-card {
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #e0e9e2;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px #e5eee7;
+}
+
+.group-card h3 {
+    margin-top: 0;
+}
+
+.group-card p {
+    color: #63786a;
+    line-height: 1.6;
+}
+
+.message {
+    color: #16844d;
+}
+
+footer.page-width {
+    padding: 25px 0;
+    border-top: 1px solid #e0e9e2;
+    color: #718477;
+    font-size: 13px;
+}
+
+@media (max-width: 800px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .top-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .top-row nav a {
+        margin: 0 8px;
+    }
+}

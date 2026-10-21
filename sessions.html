@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Sessions - StudyCircle</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/groups.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="page-width top-row">
+            <a href="index.html" class="brand">📚 StudyCircle</a>
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="groups.html">Groups</a>
+                <a href="sessions.html">Sessions</a>
+                <a href="index.html">Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-width">
+        <section class="welcome">
+            <h1>Study Sessions 📅</h1>
+            <p>Plan a study session with your classmates.</p>
+        </section>
+
+        <section class="form-box">
+            <h2>Schedule a Session</h2>
+            <form onsubmit="return addSession()">
+                <label for="sessionTitle">Session Title</label>
+                <input type="text" id="sessionTitle" placeholder="Enter session title" required>
+
+                <label for="sessionDate">Date</label>
+                <input type="date" id="sessionDate" required>
+
+                <label for="sessionTime">Time</label>
+                <input type="time" id="sessionTime" required>
+
+                <label for="sessionPlace">Location or Meeting Link</label>
+                <input type="text" id="sessionPlace" placeholder="Location or online meeting link" required>
+
+                <button type="submit" class="green-btn">Add Session</button>
+                <p id="sessionMessage" class="message"></p>
+            </form>
+        </section>
+
+        <section class="list-section">
+            <h2>Study Sessions</h2>
+            <div class="cards" id="sessionList">
+                <div class="group-card">
+                    <h3>JavaScript Practice</h3>
+                    <p><strong>Date:</strong>10/20/2026</p>
+                    <p><strong>Location:</strong> FOC Study Area</p>
+                    <button class="green-btn" onclick="joinSession(this)">Join Session</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-width">StudyCircle • Student Learning Community</footer>
+    <script src="js/groups.js"></script>
+</body>
+</html>
