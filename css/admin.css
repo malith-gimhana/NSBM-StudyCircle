@@ -1,0 +1,167 @@
+/* Admin page styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3faf5;
+    color: #193b2b;
+}
+
+.admin-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.admin-header {
+    background-color: white;
+    border-bottom: 1px solid #dddddd;
+}
+
+.admin-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 0;
+}
+
+.admin-logo {
+    color: #167c45;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.admin-nav a {
+    margin-left: 18px;
+    color: #24553b;
+    text-decoration: none;
+}
+
+.admin-nav a:hover {
+    color: #16a05b;
+}
+
+.admin-welcome {
+    margin: 45px 0 30px;
+}
+
+.admin-welcome h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.admin-welcome p {
+    color: #688174;
+}
+
+.admin-cards {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 35px;
+}
+
+.admin-card {
+    flex: 1;
+    background-color: white;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #e2eee5;
+    box-shadow: 0 4px 12px #e3ebe5;
+}
+
+.admin-card h3 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.admin-card p {
+    color: #16874c;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 15px 0 0;
+}
+
+.admin-section {
+    background-color: white;
+    padding: 24px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    border: 1px solid #e2eee5;
+}
+
+.admin-section h2 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.table-scroll {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #e5eee7;
+}
+
+th {
+    background-color: #eaf7ee;
+}
+
+button {
+    background-color: #d94b4b;
+    color: white;
+    border: none;
+    padding: 9px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b93636;
+}
+
+.admin-message {
+    color: #16874c;
+    margin-bottom: 30px;
+}
+
+.admin-footer {
+    padding: 25px;
+    text-align: center;
+    color: #688174;
+}
+
+@media (max-width: 700px) {
+    .admin-nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .admin-cards {
+        flex-wrap: wrap;
+    }
+
+    .admin-card {
+        flex: 1 1 40%;
+    }
+
+    .admin-welcome h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 450px) {
+    .admin-card {
+        flex: 1 1 100%;
+    }
+
+    .admin-section {
+        padding: 15px;
+    }
+}
