@@ -1,4 +1,3 @@
-
 function loginCheck() {
     var email = document.getElementById("loginEmail").value.trim();
     var password = document.getElementById("loginPassword").value;
@@ -8,16 +7,17 @@ function loginCheck() {
 
     if (email == "" || password == "") {
         message.textContent = "Please fill in all fields.";
+        return false;
     }
     else if (!email.includes("@")) {
         message.textContent = "Enter a valid email.";
+        return false;
     }
     else {
         message.textContent = "All fields are valid.";
         message.style.color = "green";
+        return true;
     }
-
-    return false;
 }
 
 function registerCheck() {
@@ -31,20 +31,23 @@ function registerCheck() {
 
     if (name == "" || email == "" || password == "" || confirmPassword == "") {
         message.textContent = "Please fill in all fields.";
+        return false;
     }
     else if (!email.includes("@")) {
         message.textContent = "Enter a valid email.";
+        return false;
     }
     else if (password.length < 8) {
         message.textContent = "Password must have at least 8 characters.";
+        return false;
     }
     else if (password != confirmPassword) {
         message.textContent = "Passwords do not match.";
+        return false;
     }
     else {
         message.textContent = "All fields are valid.";
         message.style.color = "green";
+        return true;
     }
-
-    return false;
 }
