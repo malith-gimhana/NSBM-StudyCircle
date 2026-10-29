@@ -33,6 +33,7 @@ body {
 
 .top-row nav {
     display: flex;
+    align-items: center;
     gap: 20px;
 }
 
@@ -45,6 +46,22 @@ body {
 .top-row nav a:hover {
     color: #1ca15c;
 }
+
+.top-row nav .logout-btn {
+    background-color: #e5484d;
+    color: white;
+    padding: 9px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.top-row nav .logout-btn:hover {
+    background-color: #c92a30;
+    color: white;
+}
+
 
 .welcome {
     padding: 45px 0 25px;
@@ -167,6 +184,7 @@ input, select, textarea {
     color: #176c3e;
     font-weight: bold;
 }
+
 
 
 footer {
