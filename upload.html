@@ -13,7 +13,7 @@
             <a href="index.html" class="brand">📚 StudyCircle</a>
             <nav>
                 <a href="dashboard.html">Dashboard</a>
-                <a href="notes.html">Notes</a>
+                <a href="notes.php">Notes</a>
                 <a href="upload.html">Upload</a>
                 <a href="index.html">Home</a>
             </nav>
@@ -26,11 +26,13 @@
         </section>
 
         <section class="form-box">
-            <form id="uploadForm" onsubmit="return uploadCheck()">
+
+            <form id="uploadForm" action="php/upload_note.php" method="POST" enctype="multipart/form-data" onsubmit="return uploadCheck()">
                 <label for="noteTitle">Note Title</label>
-                <input type="text" id="noteTitle" placeholder="Enter note title" required>
+                <input type="text" id="noteTitle" name="title" placeholder="Enter note title" required>
+
                 <label for="subject">Subject</label>
-                <select id="subject" required>
+                <select id="subject" name="subject" required>
                     <option value="" hidden>Choose a subject</option>
                     <option>Web and Mobile Development</option>
                     <option>Algorithms and Data Structures</option>
@@ -39,12 +41,16 @@
                     <option>Fundamentals of Data Communication and Security</option>
                     <option>Other</option>
                 </select>
+
                 <label for="description">Description</label>
-                <textarea id="description" rows="4" placeholder="Short description" required></textarea>
+                <textarea id="description" name="description" rows="4" placeholder="Short description" required></textarea>
+
                 <label for="noteFile">Select PDF file</label>
-                <input type="file" id="noteFile" accept=".pdf,application/pdf" required>
+                <input type="file" id="noteFile" name="noteFile" accept=".pdf,application/pdf" required>
                 <button type="submit" class="green-btn">Upload Note</button>
+
             </form>
+
             <p id="uploadMessage" class="message" aria-live="polite"></p>
         </section>
     </main>
