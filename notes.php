@@ -18,6 +18,7 @@ include "php/get_notes.php";
     <title>Notes - StudyCircle</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="icon" href="images/favicon.png">
 </head>
 <body>
 
