@@ -1,12 +1,19 @@
+
 <?php
 session_start();
 include "db.php";
+
+if ($_SERVER["REQUEST_METHOD"] != "POST") {
+    header("Location: ../login.html");
+    exit();
+}
 
 $email = trim($_POST["email"] ?? "");
 $password = $_POST["password"] ?? "";
 
 if ($email == "" || $password == "") {
-    die("Please fill in all fields.");
+    header("Location: ../login.html?error=empty");
+    exit();
 }
 
 $sql = "SELECT id, password, role FROM users WHERE email = ?";
@@ -29,7 +36,8 @@ if ($result->num_rows == 1) {
 
         if ($user["role"] == "admin") {
             header("Location: ../admin.php");
-        } else {
+        }
+        else {
             header("Location: ../dashboard.html");
         }
 
@@ -37,8 +45,9 @@ if ($result->num_rows == 1) {
     }
 }
 
-echo "Invalid email or password.";
-
 $stmt->close();
 $conn->close();
+
+header("Location: ../login.html?error=invalid");
+exit();
 ?>

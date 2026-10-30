@@ -45,6 +45,24 @@
         </div>
     </main>
 
+    
+<script>
+    var params = new URLSearchParams(window.location.search);
+    var error = params.get("error");
+    var message = document.getElementById("loginMessage");
+
+    if (error == "invalid") {
+        message.textContent = "Incorrect email or password.";
+        message.style.color = "red";
+    }
+    else if (error == "empty") {
+        message.textContent = "Please fill in all fields.";
+        message.style.color = "red";
+    }
+</script>
+
+<script src="js/auth.js"></script>
+
     <script src="js/auth.js"></script>
 
 </body>
