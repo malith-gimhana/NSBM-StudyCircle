@@ -20,6 +20,8 @@ CREATE TABLE IF NOT EXISTS notes (
 CREATE TABLE IF NOT EXISTS questions (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
+    title VARCHAR(200) NOT NULL,
+    subject VARCHAR(100) NOT NULL,
     question TEXT NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
