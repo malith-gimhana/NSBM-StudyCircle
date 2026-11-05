@@ -6,12 +6,19 @@
     <title>Dashboard - StudyCircle</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="icon" href="images/favicon.png">
 </head>
 <body>
     <header class="topbar">
         <div class="page-width top-row">
             <a href="index.html" class="brand">📚 StudyCircle</a>
-            <nav><a href="dashboard.html">Dashboard</a><a href="notes.html">Notes</a><a href="upload.html">Upload</a><a href="index.html">Home</a></nav>
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="notes.php">Notes</a>
+                <a href="upload.html">Upload</a>
+                <a href="index.html">Home</a>
+                <a href="php/logout.php" class="logout-btn">Logout</a>
+            </nav>
         </div>
     </header>
     <main class="page-width">
@@ -20,17 +27,17 @@
             <p>Find notes and share study materials with your friends.</p>
         </section>
         <section class="card-row">
-            <div class="info-card"><h2>📚 Notes</h2><p>Browse lecture notes shared by students.</p><a class="green-btn" href="notes.html">View Notes</a></div>
+            <div class="info-card"><h2>📚 Notes</h2><p>Browse lecture notes shared by students.</p><a class="green-btn" href="notes.php">View Notes</a></div>
             <div class="info-card"><h2>⬆️ Upload</h2><p>Share your own notes with others.</p><a class="green-btn" href="upload.html">Upload Notes</a></div>
             <div class="info-card"><h2>💬 Questions</h2><p>Ask questions in the student community.</p><a class="green-btn" href="questions.html">Ask Questions</a></div>
         </section>
         <section class="content-box">
             <h2>Recent Notes</h2>
-            <div class="note-line"><span>Web and Mobile Development</span><a href="notes.html">View</a></div>
-            <div class="note-line"><span>Algorithms and Data Structures</span><a href="notes.html">View</a></div>
-            <div class="note-line"><span>Object Oriented Programming with Java</span><a href="notes.html">View</a></div>
-            <div class="note-line"><span>IT Solutions Architecture</span><a href="notes.html">View</a></div>
-            <div class="note-line"><span>Fundamentals of Data Communication and Security</span><a href="notes.html">View</a></div>
+            <div class="note-line"><span>Web and Mobile Development</span><a href="notes.php">View</a></div>
+            <div class="note-line"><span>Algorithms and Data Structures</span><a href="notes.php">View</a></div>
+            <div class="note-line"><span>Object Oriented Programming with Java</span><a href="notes.php">View</a></div>
+            <div class="note-line"><span>IT Solutions Architecture</span><a href="notes.php">View</a></div>
+            <div class="note-line"><span>Fundamentals of Data Communication and Security</span><a href="notes.php">View</a></div>
         </section>
     </main>
     <footer class="page-width">StudyCircle • Student Learning Community</footer>

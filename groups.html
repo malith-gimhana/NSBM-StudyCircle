@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Groups - StudyCircle</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/groups.css">
+    <link rel="icon" href="images/favicon.png">
+</head>
+<body>
+    <header class="topbar">
+        <div class="page-width top-row">
+            <a href="index.html" class="brand">📚 StudyCircle</a>
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="groups.html">Groups</a>
+                <a href="sessions.html">Sessions</a>
+                <a href="index.html">Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-width">
+        <section class="welcome">
+            <h1>Study Groups 👥</h1>
+            <p>Find students who study the same subjects as you.</p>
+        </section>
+
+        <section class="form-box">
+            <h2>Create a Group</h2>
+            <form onsubmit="return addGroup()">
+                <label for="groupName">Group Name</label>
+                <input type="text" id="groupName" placeholder="Enter group name" required>
+
+                <label for="groupSubject">Subject</label>
+                <select id="groupSubject" required>
+                    <option value="" hidden>Choose a subject</option>
+                    <option>Web and Mobile Development</option>
+                    <option>Algorithms and Data Structures</option>
+                    <option>Object Oriented Programming with Java</option>
+                    <option>IT Solutions Architecture</option>
+                    <option>Fundamentals of Data Communication and Security</option>
+                    <option>Other</option>
+                </select>
+
+                <label for="groupDescription">Description</label>
+                <textarea id="groupDescription" rows="3" placeholder="About this group" required></textarea>
+
+                <button type="submit" class="green-btn">Create Group</button>
+                <p id="groupMessage" class="message"></p>
+            </form>
+        </section>
+
+        <section class="list-section">
+            <h2>Available Groups</h2>
+            <div class="cards" id="groupList">
+                <div class="group-card">
+                    <h3>Web Development Team</h3>
+                    <p><strong>Subject:</strong>Web and Mobile Development</p>
+                    <p>Share HTML, CSS, PHP and JavaScript knowledge.</p>
+                    <button class="green-btn" onclick="joinGroup(this)">Join Group</button>
+                </div>
+                <div class="group-card">
+                    <h3>ALGO Study Group</h3>
+                    <p><strong>Subject:</strong>Algorithms and Data Structures</p>
+                    <p>Practice ALGO questions together.</p>
+                    <button class="green-btn" onclick="joinGroup(this)">Join Group</button>
+                </div>
+                <div class="group-card">
+                    <h3>Programming Friends</h3>
+                    <p><strong>Subject:</strong> Object Oriented Programming with Java</p>
+                    <p>Discuss coding exercises and assignments.</p>
+                    <button class="green-btn" onclick="joinGroup(this)">Join Group</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-width">StudyCircle • Student Learning Community</footer>
+    <script src="js/groups.js"></script>
+</body>
+</html>
