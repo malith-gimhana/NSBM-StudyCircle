@@ -151,3 +151,10 @@ footer.page-width {
         margin: 0 8px;
     }
 }
+
+.open-group-btn {
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 10px;
+    text-align: center;
+}
