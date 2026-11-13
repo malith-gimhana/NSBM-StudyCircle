@@ -114,7 +114,10 @@ $groupCount = mysqli_num_rows($groups);
                         <?php echo htmlspecialchars($student["email"]); ?>
                     </td>
                     <td>
-                        <button disabled>Remove</button>
+                        <form action="php/delete_student.php" method="POST" onsubmit="return removeRow()">
+                            <input type="hidden" name="id" value="<?php echo (int)$student["id"]; ?>">
+                            <button type="submit">Remove</button>
+                        </form>
                     </td>
                 </tr>
                 <?php } ?>
@@ -142,7 +145,10 @@ $groupCount = mysqli_num_rows($groups);
                         <?php echo htmlspecialchars($note["subject"]); ?>
                     </td>
                     <td>
-                        <button disabled>Remove</button>
+                        <form action="php/delete_note.php" method="POST" onsubmit="return removeRow()">
+                            <input type="hidden" name="id" value="<?php echo (int)$note["id"]; ?>">
+                            <button type="submit">Remove</button>
+                        </form>
                     </td>
                 </tr>
                 <?php } ?>
@@ -170,7 +176,10 @@ $groupCount = mysqli_num_rows($groups);
                         <?php echo htmlspecialchars($question["subject"]); ?>
                     </td>
                     <td>
-                        <button disabled>Remove</button>
+                        <form action="php/delete_question.php" method="POST" onsubmit="return removeRow()">
+                            <input type="hidden" name="id" value="<?php echo (int)$question["id"]; ?>">
+                            <button type="submit">Remove</button>
+                        </form>
                     </td>
                 </tr>
                 <?php } ?>
@@ -198,7 +207,10 @@ $groupCount = mysqli_num_rows($groups);
                         <?php echo htmlspecialchars($group["subject"]); ?>
                     </td>
                     <td>
-                        <button disabled>Remove</button>
+                        <form action="php/delete_group.php" method="POST" onsubmit="return removeRow()">
+                            <input type="hidden" name="id" value="<?php echo (int)$group["id"]; ?>">
+                            <button type="submit">Remove</button>
+                        </form> 
                     </td>
                 </tr>
                 <?php } ?>
