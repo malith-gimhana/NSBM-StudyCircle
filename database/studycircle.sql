@@ -58,3 +58,12 @@ CREATE TABLE IF NOT EXISTS sessions (
     session_time TIME NOT NULL,
     location VARCHAR(150) NOT NULL
 );
+
+
+CREATE TABLE group_messages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    group_id INT NOT NULL,
+    user_id INT NOT NULL,
+    message TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

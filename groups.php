@@ -97,7 +97,13 @@ $groups = mysqli_query($conn, "SELECT * FROM study_groups ORDER BY id DESC");
                         ?>
 
                         <?php if ($joined) { ?>
+
                             <button class="green-btn" disabled>Joined</button>
+
+                            <a href="group_chat.php?id=<?php echo $group_id; ?>" class="green-btn open-group-btn">
+                                    Open Group
+                            </a>
+
                         <?php } else { ?>
                             <form action="php/join_group.php" method="POST"
                                   onsubmit="return joinGroup(this)">
